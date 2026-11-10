@@ -1,0 +1,48 @@
+{{ with hugo.Data.huggingface }}
+<section id="releases" class="releases-page" aria-labelledby="releases-title">
+  <header class="releases-heading">
+    <h1 id="releases-title" class="profile-name">Open Model & Dataset Releases</h1>
+  </header>
+  <div class="release-summary">
+    <div class="release-summary-copy">
+      <p class="releases-intro">A selection of my open model and dataset releases.</p>
+    </div>
+    <div class="release-actions">
+      <a class="hf-profile-link" href="{{ .profile_url }}" target="_blank" rel="noopener noreferrer">Hugging Face <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="release-statistics" aria-label="Download statistics">
+  <dl class="release-stats">
+    <div class="release-stat-total"><dt>total downloads</dt><dd data-aggregate-all-time="all">{{ lang.FormatNumber 0 .downloads_all_time }}</dd></div>
+    <div class="release-stat-month"><dt>last 30 days</dt><dd data-aggregate-month="all">{{ lang.FormatNumber 0 .downloads_month }}</dd></div>
+  </dl>
+    <p class="release-updated" aria-live="polite">Updated <time id="release-updated" datetime="{{ .fetched_at }}">{{ time.Format "2 Jan 2006, 15:04" .fetched_at }}</time></p>
+  </div>
+  <div class="release-years">
+    {{ range .groups }}
+    <section class="release-category" aria-labelledby="release-category-{{ .id }}">
+      <h2 id="release-category-{{ .id }}" class="release-category-title">{{ .title }}</h2>
+      <ul class="release-collections">
+        {{ range .collections }}
+        <li class="release-collection">
+          <div class="release-collection-info">
+            <div class="release-collection-heading">
+              <a class="release-collection-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title }} <span aria-hidden="true">↗</span></a>
+              <span class="release-collection-year">{{ .year }}</span>
+            </div>
+            <p class="release-collection-description">{{ .description }}</p>
+          </div>
+          <div class="release-collection-stat">
+            <span class="release-download-number" data-aggregate-all-time="{{ .id }}">{{ lang.FormatNumber 0 .downloads_all_time }}</span>
+            <span class="release-download-label">downloads<span class="release-sr-only">, all time</span>{{ with .note }} <span class="release-collection-note">({{ strings.TrimSuffix "." . }})</span>{{ end }}</span>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+  </div>
+  <span id="release-refresh-status" class="release-sr-only" role="status"></span>
+  <script id="release-live-config" type="application/json">{{ .live | jsonify | safeJS }}</script>
+</section>
+{{ end }}

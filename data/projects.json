@@ -1,0 +1,29 @@
+[
+  {
+    "title": "DoctoBERT & FineMed",
+    "year": 2026,
+    "description": "A Web Data Recipe for Medical Encoder Pretraining",
+    "links": [
+      {
+        "title": "Blog",
+        "url": "https://huggingface.co/blog/bofenghuang/doctobert-fr-release"
+      },
+      {
+        "title": "Paper",
+        "url": "https://arxiv.org/abs/2606.22079"
+      },
+      {
+        "title": "Code",
+        "url": "https://github.com/doctolib-lab/doctobert"
+      },
+      {
+        "title": "Models",
+        "url": "https://huggingface.co/collections/doctolib-lab/doctobert-fr"
+      },
+      {
+        "title": "Datasets",
+        "url": "https://huggingface.co/collections/doctolib-lab/finemed-fr"
+      }
+    ]
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "categories": [
+    {
+      "id": "medical",
+      "title": "Medical models & datasets"
+    },
+    {
+      "id": "speech",
+      "title": "Speech recognition"
+    },
+    {
+      "id": "language",
+      "title": "French LLMs"
+    }
+  ],
+  "collections": {
+    "67e18241fb266177bed51674": {
+      "category": "speech",
+      "description": "English distilled Whisper, in collaboration with Hugging Face.",
+      "year": 2024,
+      "title": "English Distil Whisper v3.5"
+    },
+    "67332cb43ed65dd1966f0f29": {
+      "category": "speech",
+      "description": "Multilingual distilled Whisper models.",
+      "excluded_resources": [
+        "model:distil-whisper/distil-large-v3.5"
+      ],
+      "note": "excl. v3.5",
+      "year": 2024,
+      "title": "Multilingual Distil Whisper"
+    },
+    "64f9cc3cf625e46d12f0e4bd": {
+      "category": "speech",
+      "description": "French Whisper v3 models.",
+      "year": 2023
+    },
+    "673328506c51a40ff8c55d7c": {
+      "category": "speech",
+      "description": "French Whisper v2 models.",
+      "year": 2022
+    },
+    "67332b06c3b181f9acbd8130": {
+      "category": "speech",
+      "description": "German Whisper v2 models.",
+      "year": 2022
+    },
+    "673329a74cb4bc0af22632b0": {
+      "category": "speech",
+      "description": "Lightweight French ASR models (wav2vec2, Conformer).",
+      "year": 2022
+    },
+    "67332fe16612435d0eeb4a39": {
+      "category": "language",
+      "description": "French instruction-following and chat LLMs.",
+      "year": 2023
+    },
+    "64f9ca5e90dbb62435b7100f": {
+      "category": "language",
+      "description": "Llama 2-based French LLMs.",
+      "year": 2023
+    },
+    "65c25e20f8a51dbdb73cebe8": {
+      "category": "language",
+      "description": "Mistral-based French LLM.",
+      "year": 2023
+    },
+    "6abf73796352ca4f976be8a7": {
+      "category": "medical",
+      "description": "French medical text diffusion and instruction-tuning models.",
+      "year": 2026,
+      "order": 2,
+      "title": "DoctoBERT Diffusion fr"
+    },
+    "6a3146220ea492d60df19487": {
+      "category": "medical",
+      "description": "French medical encoders.",
+      "year": 2026,
+      "order": 0,
+      "title": "DoctoBERT fr"
+    },
+    "6a3141426d4ee03d873576f1": {
+      "category": "medical",
+      "description": "French medical pretraining corpus and annotator models.",
+      "year": 2026,
+      "order": 1,
+      "title": "FineMed fr"
+    }
+  },
+  "collection_sources": {
+    "6af27be319339ae58d797087": "distil-whisper/distil-large-v35",
+    "6af27be4c854cb463b64d2e8": "doctolib-lab/doctobert-fr",
+    "6af27be668e089a2ac296e6f": "doctolib-lab/finemed-fr"
+  }
+}

@@ -3,3 +3,9 @@
 /.hugo_build.lock
 /.cache/
 .DS_Store
+
+# Python refresh-script caches
+__pycache__/
+*.py[cod]
+
+/data/*.json.tmp

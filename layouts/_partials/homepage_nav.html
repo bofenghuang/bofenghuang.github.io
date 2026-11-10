@@ -1,0 +1,11 @@
+<nav class="homepage-nav" aria-label="Primary">
+  <a href="{{ "" | relURL }}" {{ if .IsHome }}aria-current="page"{{ end }}>About</a>
+  {{/* Projects is temporarily hidden.
+  <a href="{{ "projects/" | relURL }}" {{ if eq .Layout "projects" }}aria-current="page"{{ end }}>Projects</a>
+  */}}
+  <a href="{{ "releases/" | relURL }}" {{ if eq .Layout "releases" }}aria-current="page"{{ end }}>Releases</a>
+  <button id="theme-toggle" class="theme-toggle personal-theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+    <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+  </button>
+</nav>

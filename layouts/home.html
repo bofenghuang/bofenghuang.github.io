@@ -1,5 +1,6 @@
 {{ define "main" }}
-<article class="post-single">
+{{ partial "homepage_nav.html" . }}
+<article id="about" class="post-single about-section" aria-label="About Bofeng Huang">
   <h1 class="profile-name">{{ .Title }}</h1>
   <div class="post-content md-content">
     {{ .Content }}

@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ partial "homepage_nav.html" . }}
+<section class="projects-page" aria-labelledby="projects-title">
+  <h1 id="projects-title" class="profile-name">Projects</h1>
+  {{ range hugo.Data.projects }}
+  <article class="project-entry">
+    <header class="project-heading">
+      <h2>{{ .title }}</h2>
+      <span class="project-year">{{ .year }}</span>
+    </header>
+    <p class="project-description">{{ .description }}</p>
+    <nav class="project-links" aria-label="{{ .title }} resources">
+      {{ range .links }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title }} <span aria-hidden="true">↗</span></a>{{ end }}
+    </nav>
+  </article>
+  {{ end }}
+</section>
+{{ end }}

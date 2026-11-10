@@ -12,7 +12,7 @@ params:
   description: Healthcare, conversational AI, and natural language processing.
   author: Bofeng Huang
   defaultTheme: light
-  disableThemeToggle: true
+  disableThemeToggle: false
   disableScrollToTop: true
   socialIcons:
     - name: github

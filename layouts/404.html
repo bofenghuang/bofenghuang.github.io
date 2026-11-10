@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ partial "homepage_nav.html" . }}
+<section aria-labelledby="not-found-title">
+  <h1 id="not-found-title" class="profile-name">Page not found</h1>
+  <div class="post-content"><p><a href="{{ "" | relURL }}">Back to About</a></p></div>
+</section>
+{{ end }}

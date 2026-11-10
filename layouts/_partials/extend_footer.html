@@ -1,0 +1,11 @@
+{{ if eq .Layout "releases" }}
+{{ with resources.Get "js/releases.js" }}
+{{ $script := . | minify | fingerprint }}
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+{{ end }}
+{{ end }}
+
+{{ with resources.Get "js/theme.js" }}
+{{ $script := . | minify | fingerprint }}
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+{{ end }}
