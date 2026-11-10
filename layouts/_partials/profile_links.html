@@ -1,0 +1,14 @@
+<nav aria-label="Social profiles">
+  <div class="social-icons">
+    {{ range site.Params.socialIcons }}
+    <a href="{{ .url | safeURL }}" target="_blank" rel="noopener noreferrer me"
+       title="{{ .title }}" aria-label="{{ .title }}">
+      {{ if eq .name "huggingface" }}
+      <img src="{{ "icons/huggingface.svg" | relURL }}" width="20" height="20" alt="" aria-hidden="true">
+      {{ else }}
+      {{ partial "svg.html" . }}
+      {{ end }}
+    </a>
+    {{ end }}
+  </div>
+</nav>

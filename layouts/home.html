@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="post-single">
+  <h1 class="profile-name">{{ .Title }}</h1>
+  <div class="post-content md-content">
+    {{ .Content }}
+  </div>
+  {{ partial "profile_links.html" . }}
+</article>
+{{ end }}
